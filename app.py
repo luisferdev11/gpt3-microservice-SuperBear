@@ -10,8 +10,9 @@ app = Flask(__name__)
 def index():
     try:
         original = request.json['voice']
-        print(original)
+        # print(original)
         generated = generate_response(original)
+        # print(generated)
         return jsonify({
             'mensaje': 'registro exitoso',
             # 'generated': generated,
