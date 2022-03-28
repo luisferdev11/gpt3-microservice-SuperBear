@@ -5,6 +5,9 @@ from gpt3 import generate_response
 
 app = Flask(__name__)
 
+CORS(app, resources={
+     r"/product/*": {"origins": ["http://localhost", "http://super-bear.azurewebsites.net/"]}})
+
 
 @app.route("/product", methods=['POST'])
 def index():
